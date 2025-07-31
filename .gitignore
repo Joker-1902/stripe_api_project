@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/ 
+*/.venv/
+
+
+.pytest_cache/
+.coverage
+
+*.log
+*.sqlite3
+db.sqlite3 
+
+.env 
+
+
+.vscode/ 
+
+
+Thumbs.db # Windows
+ehthumbs.db # Windows
+
+/htmlcov/
+.nox/
+.eggs/
+*.egg-info/

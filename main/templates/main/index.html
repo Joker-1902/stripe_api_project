@@ -1,0 +1,19 @@
+<html>
+<head>
+  <title>Магазин</title>
+</head>
+<body>
+  <h1>Все товары</h1>
+
+  {% for item in items %}
+    <div>
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <p>Цена: ${{ item.price }}</p>
+      <a href="{% url 'item_detail' id=item.id %}">Подробнее</a>
+    </div>
+  {% empty %}
+    <p>Товары не найдены.</p>
+  {% endfor %}
+</body>
+</html>
