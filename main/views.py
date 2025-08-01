@@ -1,5 +1,6 @@
 import os
-from django.http import Http404, JsonResponse
+from django.http import Http404, JsonResponse, HttpResponse
+from django.contrib.auth.models import User
 import stripe
 from django.shortcuts import get_object_or_404, render,redirect
 from .models import Item
@@ -47,5 +48,14 @@ def item_detail(request,id):
 
 def success_page(request):
     return render(request, 'main/success.html')
+
+
+def create_sepueruser(request):
+    if not User.objects.filter(username='demo').exists():
+        User.objects.create_superuser('demo','demo@example.com','demo1234')
+        return HttpResponse('Суперюзер был создан')
+    return HttpResponse('Суперюзер уже существует')
+
+
     
 
