@@ -49,11 +49,7 @@ def item_detail(request,id):
 def success_page(request):
     return render(request, 'main/success.html')
 
-def create_admin(request):
-    if not User.objects.filter(username="demo").exists():
-        User.objects.create_superuser("demo", "demo@example.com", "demo1234")
-        return HttpResponse("Superuser 'demo' создан.")
-    return HttpResponse("Пользователь уже существует.")
+
 
     
 
