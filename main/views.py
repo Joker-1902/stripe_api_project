@@ -50,12 +50,6 @@ def success_page(request):
     return render(request, 'main/success.html')
 
 
-def create_sepueruser(request):
-    if not User.objects.filter(username='demo').exists():
-        User.objects.create_superuser('demo','demo@example.com','demo1234')
-        return HttpResponse('Суперюзер был создан')
-    return HttpResponse('Суперюзер уже существует')
-
 
     
 
