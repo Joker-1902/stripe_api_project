@@ -50,15 +50,20 @@ python manage.py runserver
 
 ## Как работает
 
-### GET /item/{id}
+### Страница товара: `/item/<id>`
 
-- Простая HTML-страница с данными товара и кнопкой "Buy". При нажатии на кнопку:
+- Показывает название, описание, цену и кнопку "Buy"
+- При клике на "Buy":
+  - JS делает запрос на `/buy/<id>`
+  - Получает `session.id`
+  - Редиректит пользователя на Stripe Checkout через `stripe.redirectToCheckout`
 
-- JS отправляет GET-запрос на /buy/{id}
-
-- Получает session.id
-
-- Происходит редирект в Stripe Checkout
-
-### /buy/{id}
+### GET/buy/{id}
 - Создаёт Stripe Session и возвращает session.id в JSON формате.
+
+
+## Сайт: [stripe-api-project.onrender.com](https://stripe-api-project.onrender.com)
+### Пример товара:  
+https://stripe-api-project.onrender.com/item/1
+
+### Пример `.env` доступен в файле `.env.example`
