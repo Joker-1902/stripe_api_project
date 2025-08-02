@@ -67,3 +67,13 @@ python manage.py runserver
 https://stripe-api-project.onrender.com/item/1
 
 ### Пример `.env` доступен в файле `.env.example`
+
+## Тестирование платежей
+
+Для тестирования процесса оплаты на Stripe Checkout используйте [тестовые данные карт Stripe](https://stripe.com/docs/testing#cards). Например:
+
+* Номер карты: `4242 4242 4242 4242`
+* Дата истечения: любая будущая дата
+* CVC: любой 3-значный код
+* Имя: любое
+* Индекс: любой (например, `90210`)
