@@ -41,7 +41,7 @@ def item_detail(request,id):
     item = get_object_or_404(Item, pk=id)
     context = {
         'item':item,
-        'STRIPE_PUBLIC_KEY': settings.STRIPE_PUBLISHABLE_KEY
+        'STRIPE_PUBLISHABLE_KEY': settings.STRIPE_PUBLISHABLE_KEY
     }
     return render(request, 'main/item_detail.html', context)
 
