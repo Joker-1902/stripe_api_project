@@ -66,6 +66,14 @@ python manage.py runserver
 ### Пример товара:  
 https://stripe-api-project.onrender.com/item/1
 
+
+## Вход в админку
+Для этого используйте данный URL: [stripe-api-project.onrender.com/admin](https://stripe-api-project.onrender.com/admin)
+
+`username` и `password` предоставляются через личные сообщения    
+
+
+
 ### Пример `.env` доступен в файле `.env.example`
 
 ## Тестирование платежей
